@@ -29,6 +29,12 @@ p {
 body {
     overflow-x: hidden;
     background-color: white;
+    font-family: 'Manrope';
+    background-color: #E7EEF7;
+
+    background-image: url('../images/page-index/bg-1.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
 }
 
 .container {
@@ -42,3 +48,15 @@ body {
     display: flex;
 }
 
+.btn {
+    padding: 10px 20px;
+    background-color: $blue;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+
+    &--white {
+        background-color: white;
+        color: $blue;
+    }
+}
