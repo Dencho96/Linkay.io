@@ -1,0 +1,98 @@
+.feedbacks {
+    padding-bottom: 60px;
+
+    &__title {
+        margin-bottom: 60px;
+        font-size: 38px;
+        font-weight: 700;
+        text-align: center;
+        color: $blue;
+    }
+
+    &__inner {
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1092px;
+        width: 100%;
+        margin: 0 auto 60px;
+    }
+
+    &__wrapper {
+        max-width: 962px !important;
+        width: 100%;
+    }
+
+    &__item {
+        position: relative;
+        padding: 89px 18px 25px;
+        background-color: #0249BC;
+        border-radius: 15px;
+        color: #F7F9FD;    
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 18px;
+            width: 47px;
+            height: 47px;
+            border-radius: 11px;
+            background-color: $dark-blue;
+            box-shadow: 0px 3px 10px #0118479D;
+        }
+    }
+
+    &__text {
+        margin-bottom: 50px;
+        height: 225px;
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    &__avatar {
+        margin-right: 12px;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__name {
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    &__position {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    &__btn {
+        width: 20px;
+        height: 20px;
+        border: 2px solid $dark-blue;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &--prev, &--next {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &--prev {
+            background-image: url('../images/page-index/chevron-left.svg');
+        }
+
+        &--next {
+            background-image: url('../images/page-index/chevron-right.svg');
+        }
+    }
+}

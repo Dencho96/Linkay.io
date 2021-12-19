@@ -60,3 +60,25 @@ body {
         color: $blue;
     }
 }
+
+.text-darkblue {
+    color: $dark-blue;
+}
+
+.swiper-pagination {
+    position: static;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    background-color: #93BBFF;
+    transition: background-color, 0.2s;
+
+    &-active {
+        background-color: $blue;
+    }
+
+    &+& {
+        margin-left: 10px !important;
+    }
+}
