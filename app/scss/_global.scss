@@ -32,9 +32,10 @@ body {
     font-family: 'Manrope';
     background-color: #E7EEF7;
 
-    background-image: url('../images/page-index/bg-1.svg');
+    background-image: url('../images/page-index/bg-1.svg'), url('../images/page-index/bg-3.svg');
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: top left, bottom 450px left -500px;
+    background-size: auto, cover, cover;
 }
 
 .container {
@@ -71,7 +72,7 @@ body {
 
 .swiper-pagination-bullet {
     opacity: 1;
-    background-color: #93BBFF;
+    background-color: $light-blue;
     transition: background-color, 0.2s;
 
     &-active {

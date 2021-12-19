@@ -1,5 +1,8 @@
 .reasons {
     padding-top: 41px;
+    background-image: url('../images/page-index/reasons-bg-1.svg'), url('../images/page-index/reasons-bg-2.svg');
+    background-repeat: no-repeat;
+    background-position: top 75px right, top 510px left;
     
     counter-reset: count;
 
