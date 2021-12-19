@@ -1,0 +1,116 @@
+.contact {
+    padding-top: 280px;
+    height: 100vh;
+
+    &__inner {
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1182px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__box {
+        max-width: 425px;
+    }
+
+    &__title {
+        margin-bottom: 93px;
+        color: $blue;
+        font-size: 38px;
+        line-height: 48px;
+        font-weight: 700;
+
+        &>.text-darkblue {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                left: 3px;
+                width: 227px;
+                height: 20px;
+                background-image: url('../../images/text-decor-1.svg');
+            }
+        }
+    }
+
+    &__text {
+        max-width: 390px;
+        font-size: 18px;
+        line-height: 34px;
+        color: $dark-blue;
+    }
+
+    &__form {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-right: 40px;
+        max-width: 628px;
+        width: 100%;
+        font-weight: 500;
+        font-size: 18px;
+        color: $dark-blue;
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 18px;
+            color: $dark-blue;
+        }
+    }
+
+    &__label {
+        font-size: 0;
+        line-height: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+    }
+
+    &__input,
+    &__message {
+        height: 47px;
+        padding: 12px 15px 12px 41px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid $dark-blue;
+        outline: transparent;
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 18px;
+            color: $dark-blue;
+            opacity: 1;
+        }
+    }
+
+    &__input {
+
+        &--name,
+        &--telephone {
+            width: 306px;
+        }
+
+        &--email {
+            margin: 25px 0 120px;
+            width: 100%;
+        }
+
+    }
+
+    &__message {
+        margin-bottom: 55px;
+        width: 100%;
+        resize: none;
+    }
+
+    &__btn {
+        margin: 0 auto;
+        padding: 15px;
+        min-width: 284px;
+        border: none;
+        cursor: pointer;
+    }
+}

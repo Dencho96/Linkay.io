@@ -30,12 +30,8 @@ body {
     overflow-x: hidden;
     background-color: white;
     font-family: 'Manrope';
+    font-weight: 400;
     background-color: #E7EEF7;
-
-    background-image: url('../images/page-index/bg-1.svg'), url('../images/page-index/bg-3.svg');
-    background-repeat: no-repeat;
-    background-position: top left, bottom 450px left -500px;
-    background-size: auto, cover, cover;
 }
 
 .container {
@@ -55,6 +51,10 @@ body {
     border-radius: 50px;
     color: white;
     font-weight: 700;
+    transition: opacity, 0.2s;
+    &:hover {
+        opacity: 0.8;
+    }
 
     &--white {
         background-color: white;
@@ -82,4 +82,18 @@ body {
     &+& {
         margin-left: 10px !important;
     }
+}
+
+.index-wrapper {
+    background-image: url('../images/page-index/bg-1.svg'), url('../images/page-index/bg-3.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom 450px left -500px;
+    background-size: auto, cover, cover;
+}
+
+.page-contact-wrapper {
+    background-image: url('../images/page-contact/bg-1.svg');
+    background-repeat: no-repeat;
+    background-position: top right -300px;
+    background-size: contain;
 }
