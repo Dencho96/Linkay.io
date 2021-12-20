@@ -54,6 +54,7 @@ function styles() {
     return src ([
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.css',
+        'node_modules/hamburgers/dist/hamburgers.css',
         'app/scss/style.scss'
         ])
         .pipe(scss({outputStyle: 'compressed'}))

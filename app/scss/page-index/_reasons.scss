@@ -1,10 +1,13 @@
 .reasons {
-    padding-top: 41px;
+    padding: 41px 0 60px;
     background-image: url('../images/page-index/reasons-bg-1.svg'), url('../images/page-index/reasons-bg-2.svg');
     background-repeat: no-repeat;
-    background-position: top 75px right, top 510px left;
-    
+    background-position: top 75px right, top 510px left;    
     counter-reset: count;
+
+    @include maxw767 {
+        padding: 30px 0;
+    }
 
     &__title {
         margin-bottom: 41px;
@@ -12,6 +15,14 @@
         font-weight: 700;
         text-align: center;
         color: $blue;
+
+        @include maxw992 {
+            font-size: 34px;
+        }
+
+        @include maxw767 {
+            font-size: 28px;
+        }
     }
 
     &__item {
@@ -20,15 +31,28 @@
 
         &:nth-child(even) {
             flex-direction: row-reverse;
+
+            @include maxw992 {
+                flex-direction: column;
+            }
         }
 
         &+& {
-            margin-top: 75px;
+            margin-top: 35px;
+        }
+
+        @include maxw992 {
+            flex-direction: column;
+            align-items: center;
         }
     }
 
     &__box {
         padding-left: 100px;
+
+        @include maxw992 {
+            padding-left: 75px;
+        }
     }
 
     &__item-title {
@@ -37,8 +61,8 @@
         color: $blue;
         font-size: 30px;
         font-weight: 700;
-
-        
+        font-family: "JakartaSans";
+            
 
         &::before {
             counter-increment: count;
@@ -54,11 +78,25 @@
             font-size: 24px;
             color: #F7F9FD;
         }
+
+        @include maxw767 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
     }
 
     &__text {
-        font-size: 14px;
+        max-width: 460px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 28px;
         font-weight: 500;
+        color: $dark-blue;
+
+        @include maxw767 {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
     }
 
     &__img {

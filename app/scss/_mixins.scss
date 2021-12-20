@@ -1,3 +1,23 @@
-$dark-blue: #011951;
-$blue: #1068F8;
-$light-blue: #93BBFF;
+@mixin maxw1205{
+    @media (max-width: 1205px){
+        @content;
+    }
+}
+
+@mixin maxw992{
+    @media (max-width: 992px){
+        @content;
+    }
+}
+
+@mixin maxw767{
+    @media (max-width: 767px){
+        @content;
+    }
+}
+
+@mixin maxw576{
+    @media (max-width: 576px){
+        @content;
+    }
+}

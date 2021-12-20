@@ -1,6 +1,17 @@
 .contact {
-    padding-top: 280px;
-    height: 100vh;
+    padding: 225px 0 180px;
+
+    @include maxw1205 {
+        padding: 170px 0 100px;
+    }
+
+    @include maxw992 {
+        padding: 120px 0 80px;
+    }
+
+    @include maxw767 {
+        padding: 90px 0 50px;
+    }
 
     &__inner {
         justify-content: space-between;
@@ -9,10 +20,27 @@
         width: 100%;
         margin: 0 auto;
         padding: 0 15px;
+
+        @include maxw992 {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__box,
+    &__form {
+        width: 100%;
     }
 
     &__box {
+        margin-right: 20px;
         max-width: 425px;
+
+        @include maxw992 {
+            margin-right: 0;
+            margin-bottom: 25px;
+            text-align: center;
+        }
     }
 
     &__title {
@@ -24,6 +52,7 @@
 
         &>.text-darkblue {
             position: relative;
+            display: inline-block;
 
             &::before {
                 content: '';
@@ -34,6 +63,10 @@
                 height: 20px;
                 background-image: url('../images/text-decor-1.svg');
             }
+        }
+
+        @include maxw992 {
+            margin-bottom: 35px;
         }
     }
 
@@ -49,7 +82,6 @@
         flex-wrap: wrap;
         margin-right: 40px;
         max-width: 628px;
-        width: 100%;
         font-weight: 500;
         font-size: 18px;
         color: $dark-blue;
@@ -59,6 +91,10 @@
             font-size: 18px;
             color: $dark-blue;
         }
+
+        @include maxw992 {
+            margin-right: 0;
+        }
     }
 
     &__label {
@@ -67,6 +103,86 @@
         width: 0;
         height: 0;
         position: absolute;
+    }
+
+
+    &__input-wrapper {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            width: 19px;
+            height: 19px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &--name,
+        &--telephone {
+            width: 306px;
+
+            @include maxw1205 {
+                width: 100%;
+            }
+        }
+
+        &--name {
+            &::before {
+                background-image: url("../images/page-contact/icons/user.svg");
+            }
+        }
+
+        &--telephone {
+            &::before {
+                background-image: url("../images/page-contact/icons/phone-call.svg");
+            }
+
+            @include maxw1205 {
+                margin-top: 25px;
+            }
+        }
+
+        &--email {
+            margin: 25px 0 10px;
+            width: 100%;
+
+            &::before {
+                background-image: url("../images/page-contact/icons/email.svg");
+            }
+        }
+
+        &--message {
+            margin-bottom: 55px;
+            width: 100%;
+
+            &::before {
+                top: inherit;
+                bottom: 14px;
+                background-image: url("../images/page-contact/icons/pen-filled-writing-tool.svg");
+            }
+        }
+    }
+
+    &__input {
+
+        &--name,
+        &--telephone {
+            width: 100%;
+        }
+
+        &--email,
+        &--message {
+            width: 100%;
+        }
+
+        &--message {
+            height: 180px !important;
+            padding-top: 145px !important;
+            resize: none;
+        }
     }
 
     &__input,
@@ -84,26 +200,6 @@
             color: $dark-blue;
             opacity: 1;
         }
-    }
-
-    &__input {
-
-        &--name,
-        &--telephone {
-            width: 306px;
-        }
-
-        &--email {
-            margin: 25px 0 120px;
-            width: 100%;
-        }
-
-    }
-
-    &__message {
-        margin-bottom: 55px;
-        width: 100%;
-        resize: none;
     }
 
     &__btn {

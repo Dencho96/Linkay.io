@@ -5,24 +5,66 @@
         border-top: 2px solid $light-blue;        
         font-size: 14px;
         color: $dark-blue;
-        font-weight: 500;   
+        font-family: "JakartaSans";
+        font-weight: 500;
+
+        @include maxw1205 {
+            justify-content: space-between;
+        }
+
+        @include maxw767 {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__col {
+        &:first-child, &:nth-child(2) {
+            @include maxw1205 {
+                margin-right: 25px !important;
+            }
+
+            @include maxw767 {
+                margin-right: 0 !important;
+                text-align: center;
+            }
+        }
         &:first-child {
             margin-right: 330px;
         }
         &:nth-child(2) {
             margin-right: 72px;
         }
+
+        &+& {
+            @include maxw767 {
+                margin-top: 35px;
+                padding-top: 20px;
+                border-top: 2px solid $light-blue;
+            }
+        }
     }
 
     &__logo {
         margin-bottom: 45px;
+
+        @include maxw767 {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__copy {
+        @include maxw767 {
+            line-height: 22px;
+        }
     }
 
     &__list {
         margin-bottom: 39px;
+
+        @include maxw767 {
+            margin-bottom: 20px;
+        }
     }
 
     &__item {

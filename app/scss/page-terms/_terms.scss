@@ -4,6 +4,14 @@
     margin: 0 auto 33px;
     padding: 184px 15px 0;
 
+    @include maxw992 {
+        padding: 120px 15px 0;
+    }
+
+    @include maxw767 {
+        padding: 90px 15px 0;
+    }
+
     &__title {
         position: relative;
         margin-bottom: 36px;
@@ -20,13 +28,22 @@
             height: 20px;
             background-image: url('../images/text-decor-1.svg');
         }
+
+        @include maxw992 {
+            font-size: 34px;
+        }
     }
 
     &__text,
-    &__text-row {
+    &__text-row, &__info-text {
         font-size: 18px;
         line-height: 34px;
         color: $dark-blue;
+
+        @include maxw992 {
+            font-size: 16px;
+            line-height: 32px;
+        }
     }
 
     &__text {
@@ -42,11 +59,10 @@
     &__info-title {
         font-size: 27px;
         font-weight: 700;
-    }
 
-    &__info-text {
-        font-size: 18px;
+        @include maxw992 {
+            font-size: 24px;
+        }
     }
-
 
 }

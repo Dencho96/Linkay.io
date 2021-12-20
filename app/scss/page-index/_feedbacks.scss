@@ -1,12 +1,29 @@
 .feedbacks {
     padding-bottom: 60px;
 
+    @include maxw992 {
+        padding-bottom: 40px;
+    }
+
+    @include maxw767 {
+        padding-bottom: 30px;
+    }
+
     &__title {
         margin-bottom: 60px;
         font-size: 38px;
         font-weight: 700;
         text-align: center;
         color: $blue;
+
+        
+        @include maxw992 {
+            font-size: 34px;
+        }
+
+        @include maxw767 {
+            font-size: 28px;
+        }
     }
 
     &__inner {
@@ -15,11 +32,22 @@
         max-width: 1092px;
         width: 100%;
         margin: 0 auto 60px;
+
+        @include maxw992 {
+            margin: 0 auto 40px;
+        }
+        @include maxw767 {
+            margin: 0 auto 30px;
+        }
     }
 
     &__wrapper {
         max-width: 962px !important;
         width: 100%;
+
+        @include maxw767 {
+            max-width: 400px !important;
+        }
     }
 
     &__item {
@@ -27,7 +55,7 @@
         padding: 89px 18px 25px;
         background-color: #0249BC;
         border-radius: 15px;
-        color: #F7F9FD;    
+        color: #F7F9FD;
 
         &::before {
             content: '';
@@ -39,7 +67,17 @@
             border-radius: 11px;
             background-color: $dark-blue;
             box-shadow: 0px 3px 10px #0118479D;
+            background-image: url('../images/page-index/left-quote.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
         }
+    }
+
+    &__text,
+    &__name,
+    &__position {
+        font-family: "JakartaSans";
     }
 
     &__text {
@@ -47,6 +85,11 @@
         height: 225px;
         font-size: 14px;
         line-height: 26px;
+        font-weight: 500;
+    }
+
+    &__box {
+        align-items: center;
     }
 
     &__avatar {
@@ -58,9 +101,39 @@
         object-position: center;
     }
 
+    &__rating {
+        justify-content: space-between;
+        max-width: 105px;
+        width: 100%;
+        margin-bottom: 9px;
+    }
+
+    &__star {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+        &--full {
+            background-image: url('../images/page-index/star-full.svg');
+        }
+
+        &--half {
+            background-image: url('../images/page-index/star-half.svg');
+        }
+
+        &--empty {
+            background-image: url('../images/page-index/star-empty.svg');
+        }
+    }
+
     &__name {
         font-weight: 700;
         margin-bottom: 5px;
+
     }
 
     &__position {
@@ -81,7 +154,8 @@
             opacity: 0.7;
         }
 
-        &--prev, &--next {
+        &--prev,
+        &--next {
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -93,6 +167,10 @@
 
         &--next {
             background-image: url('../images/page-index/chevron-right.svg');
+        }
+
+        @include maxw1205 {
+            display: none;
         }
     }
 }
