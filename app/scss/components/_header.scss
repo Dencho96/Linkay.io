@@ -1,5 +1,5 @@
 .header {  
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -36,6 +36,10 @@
         @include maxw767 {
             top: 75px;            
             height: calc(100vh - 75px);
+        }
+
+        @media (min-width: 993px) {
+            display: block !important;
         }
     }
 
@@ -76,11 +80,6 @@
 
         &.btn {
             color: white;
-            transition: opacity 0.2s;
-
-            &:hover {
-                opacity: 0.8;
-            }
 
             @include maxw992 {
                 width: 300px;

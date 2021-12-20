@@ -51,14 +51,22 @@ body {
     border-radius: 50px;
     color: white;
     font-weight: 700;
-    transition: opacity, 0.2s;
+    transition-property: color, background-color ;
+    transition-duration: 0.2s;
+
     &:hover {
-        opacity: 0.8;
+        background-color: white;
+        color: $blue !important;
     }
 
     &--white {
         background-color: white;
         color: $blue;
+
+        &:hover {
+            background-color: $blue;
+            color: white !important;
+        }
     }
 }
 
