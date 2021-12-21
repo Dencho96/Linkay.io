@@ -35,3 +35,11 @@ $(".header__menu-btn").click(function () {
 $('.header__menu-btn').on('click', function () {
     $('.header__nav').slideToggle();
 });
+
+$("a.scroll-to").on("click", function(e){
+    e.preventDefault();
+    var anchor = $(this).attr('href');
+    $('html, body').stop().animate({
+        scrollTop: $(anchor).offset().top - 120
+    }, 800);
+});
